@@ -1,0 +1,148 @@
+/*
+ *   __         __
+ *  / /_ __ __ / /_
+ * / __/ \ \ // __/
+ * \__/ /_\_\ \__/
+ */
+
+:root
+{
+	--txt: #000;
+	--bg: #fff;
+}
+@media (prefers-color-scheme: dark)
+{
+	:root {
+		--txt: #fff;
+		--bg: #000;
+	}
+}
+
+*
+{
+	font-family:
+		Consolas,
+		Menlo,
+		Monaco,
+		Lucida Console,
+		Liberation Mono,
+		DejaVu Sans Mono,
+		Bitstream Vera Sans Mono,
+		Courier New,
+		monospace,
+		serif;
+	box-sizing: border-box;
+	background-color: var(--bg);
+	color: var(--txt);
+}
+
+body
+{
+	width: 70%;
+	margin: 0 auto;
+	padding: 0;
+	justify-content: center;
+	align-items: center;
+}
+a
+{
+	cursor: pointer;
+	color: #0066ff;
+	text-decoration: none;
+	border-bottom: 1px solid #0066ff;
+}
+a:hover
+{
+	background-color: #0066ff;
+	color: #fff;
+}
+
+.txt ul
+{
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+.txt li
+{
+	padding-left: 1em;
+	text-indent: -1em;
+}
+.txt li:before
+{
+	content: "-";
+	padding-right: 5px;
+}
+.txt ol
+{
+	list-style: none;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+.txt ol::before
+{
+	padding-left: 5px;
+	content: "\\";
+}
+.txt hr
+{
+	position: relative;
+	height: 20px;
+	font-size: 0;
+	line-height: 0;
+	overflow: hidden;
+	border: 0;
+	margin-bottom: 20px;
+}
+.txt hr:after
+{
+	content: "--------------------------------------------------------------------------------------------------------";
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 1.2rem;
+	line-height: 20px;
+	width: 100%;
+	word-wrap: break-word;
+}
+.txt-alert
+{
+	color: var(--txt);
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+	border: 1.5px solid var(--txt);
+	margin-bottom: 1.75rem;
+	margin-top: 1.5rem;
+}
+.txt-alert ul
+{
+	list-style-type: none;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0px;
+	overflow: hidden;
+}
+.txt-alert li
+{
+	display: inline;
+	word-break: break-all;
+}
+
+#txt-cursor
+{
+	border-right: 2px solid var(--txt);
+	animation: cursor 2s infinite step-end;
+	display: inline;
+	}
+	@keyframes cursor
+	{
+	from,
+	to
+	{ border-color: transparent; }
+	50%
+	{ border-color: var(--txt); }
+}
+#txt-about
+{
+	background-color: #0066ff;
+	color: #fff;
+}
